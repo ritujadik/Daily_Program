@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let s = "dvdf"
+    let t = [];
+    let max_length = []
+
+    for(let i=0;i<s.length;i++){
+        if(t.includes(s[i])){
+            t.push(s[i]);
+        } else{
+            const remaininglength = s.length -i;
+
+            if(t.length<remaininglength){
+                t.pop();
+                t=[];
+                t.push(s[i]);
+            } else {
+                break;
+            }
+
+        }
+    }
+    console.log(t);
+
+
+</script>

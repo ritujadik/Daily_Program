@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    input = "a1b3c4d1a2"
+    const x1 = []
+    const x2 = []
+    for (let i = 0;i<input.length;i+=2){
+        x1.push(input[i])
+        x2.push(Number(input[i+1]))
+    }
+    for (let i=0;i<x1.length;i++){
+        for(let j=0;j<x2[i];j++){
+            console.log(x1[i]);
+        }
+    }
+</script>

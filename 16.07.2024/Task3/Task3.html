@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+</head>
+<body>
+    <p>Sorting of a string/characters</p>
+    
+</body>
+</html>
+<script>
+    function sortstring(str){
+        let result = {};
+        for(let i=0;i<str.length;i++){
+            result[str[i]] = str.charCodeAt(i);
+        }
+        const enteries = Object.entries(result)
+        enteries.sort((a,b) =>a[1] -b[1]);
+        const sortedobj = Object.fromEntries(enteries)
+        return sortedobj
+    }
+    let str = "aMbuJ";
+    let x  = sortstring(str);
+    console.log(x);    
+</script>

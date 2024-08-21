@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    To find only truthy values from an array.
+
+// Input 
+const input = ["priya", 0, "", false, null, undefined, "ate", NaN, 9];
+
+// Output
+["priya", "ate", 9];
+    
+</body>
+</html>
+<script>
+    function truthyvalue(arr){
+        const result = []
+        for (let i = 0;i<arr.length;i++){
+            if (!arr[i] == false ){
+                result.push(arr[i])
+            }
+            
+        }
+        return result
+    }
+    console.log(truthyvalue(["priya", 0, "", false, null, undefined, "ate", NaN, 9]))
+</script>

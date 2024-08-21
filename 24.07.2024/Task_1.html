@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question_1</title>
+</head>
+<body>
+    Find missing no - [1,2,3,4,5,6,7,9]
+    
+</body>
+</html>
+<script>
+    function findmissingno(arr){
+       const min = Math.min(...arr);
+       const max = Math.max(...arr);
+       const sum = ((max-min +1)*(min+max))/2;
+       const sum1 = arr.reduce((acc,num1)=>acc+num1,0)
+       const missing_num = sum-sum1;
+
+        return missing_num;
+    }
+    const arr = [40,41,42,43,45,46,47,48,49];
+    console.log(findmissingno(arr));
+
+</script>

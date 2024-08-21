@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_3</title>
+</head>
+<body>
+const input = covertArryInOneDimension(["a", "b", "c", "d"], 2);
+
+// Output
+[
+  ["a", "b"],
+  ["c", "d"],
+];
+</body>
+</html>
+<script>
+    function convertarrayindimension(arr){
+        const result = [];
+        let arr_new = [];
+        for (let i=0;i<arr.length;i++){
+            arr_new.push(arr[i])
+            
+            if(arr_new.length===2){
+                result.push(arr_new)    
+                arr_new = [];
+            }
+        }
+        return result;
+    }
+    
+    const arr = ["a","b","c","d"];
+    const newarr = convertarrayindimension(arr);
+    console.log(newarr);
+</script>

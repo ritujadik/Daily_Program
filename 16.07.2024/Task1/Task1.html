@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+</head>
+<body>
+    <p>To find the character occurence in the string</p>
+</body>
+</html>
+<script>
+    function charocc(str){
+        let y = {};
+        for (let i of str){
+            if (y[i]){
+                y[i]+=1
+            }else{
+                y[i] = 1
+            }
+        } return y
+    }
+ let str = "RRituja"
+ let result = charocc(str);
+ console.log(result);
+
+</script>

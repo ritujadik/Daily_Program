@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function myfunction(str){
+        const new_obj = {}
+        const arr = []
+        const miss_arr1 = []
+        const miss_arr2 = []
+        const miss_arr3 = []
+        for (let i = 0;i<str.length;i++){
+            if (str[i] in new_obj){
+                new_obj[str[i]]+=1
+            } else{
+                new_obj[str[i]] = 1
+            }   
+    }
+    const sorted_obj = Object.entries(new_obj).sort((a,b)=>b[1]-a[1]);
+    
+    sorted_obj.forEach((entry,index)=>{
+        const x = entry[0];
+        if (index<8){
+            arr.push(x)
+        } else if(8<=index<16){
+            miss_arr1.push(x)
+        } else if(16<=index<24){
+            miss_arr2.push(x)
+        } else {miss_arr3.push(x)}
+    });
+   
+    
+    let  total_sum = 0;
+
+    arr.forEach(i=>{
+        total_sum+=new_obj[i] *1;
+    });
+    miss_arr1.forEach(i=>{
+        total_sum+=new_obj[i] *2;
+    });
+    miss_arr2.forEach(i=>{
+        total_sum+=new_obj[i] *3;
+    });
+    miss_arr3.forEach(i=>{
+        total_sum+=new_obj[i] *4;
+    });
+
+    return total_sum;
+};
+
+
+const str = "aabbccdddeeffgghhiiiiii"
+x = myfunction(str)    
+console.log(x)
+
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Problem</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function matrixfun(arr,row,col){
+        let matrix = []
+        for (let i = 0;i<arr.length;i+=col){
+            matrix.push(arr.slice(i,i + col));
+        }
+        let reverse_matrix = [];
+        for (let i=0;i<col;i++){
+            let newrow = [];
+            for (let j=0;j<row;j++){
+                newrow.push(matrix[j][i])
+            }
+            reverse_matrix.push(newrow.reverse());
+        }
+        return reverse_matrix;
+    }
+
+    const arr = [1,2,3,4,5,6,7,8,9];
+    const row = 3;
+    const col = 3;
+    let x = matrixfun(arr,row,col);
+    for (let i = 0;i<x.length;i++){
+        console.log(x[i])
+    }
+</script>

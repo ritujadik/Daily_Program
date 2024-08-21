@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-4</title>
+</head>
+<body>
+    <p>Check if string is an Anagram</p>
+</body>
+</html>
+<script>
+    let name = prompt("Enter the name").toLowerCase();
+    let result = prompt ("Enter the second name").toLowerCase();
+    function checkanagram(str1,str2){
+        const new_str1 = str1.split('').sort().join('');
+        const new_str2 = str2.split('').sort().join('');
+        if (str1 === str2){
+            console.log("yes this is anagram");
+        } else{
+            console.log("This is not a anagram");     
+        }
+    }
+
+    checkanagram(name,result);
+      
+</script>
