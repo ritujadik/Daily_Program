@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove Duplicate Character from string</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function removeduplicates(arr) {
+    const x = [];
+    let count = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+      let isDuplicate = false;
+
+      for (let j = 0; j < x.length; j++) {
+        if (arr[i] === x[j]) {
+          isDuplicate = true;
+          break;
+        }
+      }
+
+      if (!isDuplicate) {
+        x.push(arr[i]);
+        count++;
+      }
+    }
+    return { x, count };
+  }
+  arr = ["a", "b", "a", "b", "c", "d"];
+  const new_arr = removeduplicates(arr);
+  console.log(new_arr.x);
+  console.log(new_arr.count);
+</script>

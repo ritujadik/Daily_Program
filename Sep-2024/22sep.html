@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const y = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
+  let x = prompt("Enter the roman numeral");
+  let total = 0;
+  let prev_num = 0;
+  for (let i in x) {
+    if (x[i] in y) {
+      current_num = y[x[i]];
+      if (prev_num < current_num) {
+        total += current_num - 2 * prev_num;
+      } else {
+        total += current_num;
+      }
+      prev_num = current_num;
+    }
+  }
+  console.log(total);
+</script>

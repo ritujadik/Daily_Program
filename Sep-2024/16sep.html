@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Two Sum Question</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  nums = [2, 7, 11, 15];
+  target = 9;
+  const num1 = [];
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] === target) {
+        if (!num1.includes(nums[i] && !num1.includes(nums[j])))
+          num1.push(nums[i]);
+        num1.push(nums[j]);
+      }
+    }
+  }
+  console.log(num1);
+</script>
